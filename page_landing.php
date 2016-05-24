@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Sample.
+ * Orgiamia Starter Theme.
  *
- * This file adds the landing page template to the Genesis Sample Theme.
+ * Based on the genesis sample theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Origamia Starter
+ * @author  Antony Smith
  * @license GPL-2.0+
  * @link    http://www.studiopress.com/
  */
@@ -13,8 +13,8 @@
 //* Template Name: Landing
 
 //* Add landing page body class to the head
-add_filter( 'body_class', 'genesis_sample_add_body_class' );
-function genesis_sample_add_body_class( $classes ) {
+add_filter( 'body_class', 'origamia_base_add_body_class' );
+function origamia_base_add_body_class( $classes ) {
 
 	$classes[] = 'landing-page';
 
@@ -26,8 +26,8 @@ function genesis_sample_add_body_class( $classes ) {
 remove_action ( 'genesis_before_header', 'genesis_skip_links', 5 );
 
 //* Dequeue Skip Links Script
-add_action( 'wp_enqueue_scripts', 'genesis_sample_dequeue_skip_links' );
-function genesis_sample_dequeue_skip_links() {
+add_action( 'wp_enqueue_scripts', 'origamia_base_dequeue_skip_links' );
+function origamia_base_dequeue_skip_links() {
 
 	wp_dequeue_script( 'skip-links' );
 
